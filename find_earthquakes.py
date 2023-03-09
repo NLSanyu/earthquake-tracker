@@ -20,8 +20,9 @@ logging.basicConfig(
 
 USGS_API_URL = os.getenv("USGS_API_URL")
 LOCATIONS_FILE_URL = os.getenv("LOCATIONS_FILE_URL")
-BQ_TABLE_ID = os.getenv("BQ_TABLE_ID")
-GOOGLE_PROJECT_ID = os.getenv("GOOGLE_PROJECT_ID")
+# BQ_TABLE_ID = os.getenv("BQ_TABLE_ID")
+# GOOGLE_PROJECT_ID = os.getenv("GOOGLE_PROJECT_ID")
+
 
 
 def fetch_data(location):
