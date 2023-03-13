@@ -25,7 +25,7 @@ LOCATIONS_FILE_URL = os.getenv("LOCATIONS_FILE_URL")
 
 
 
-def fetch_data(location):
+def fetch_data(location=None, radius_km=None):
     """
     Fetch data from the USGS API
     """
@@ -36,10 +36,14 @@ def fetch_data(location):
     params = {
         "format": "geojson",
         "starttime": datetime(year, 1, 1).strftime("%Y-%m-%d"),
-        "latitude": f"{location['latitude']}",
-        "longitude": f"{location['longitude']}",
-        "maxradiuskm": "1000"
     }
+
+    if location:
+        params["latitude"] = f"{location['latitude']}"
+        params["longitude"] = f"{location['longitude']}"
+
+    if radius_km:
+        params["maxradiuskm"] = radius_km
 
     try:
         response = requests.get(USGS_API_URL, params=params)
@@ -60,7 +64,7 @@ def fetch_data(location):
 def get_earthquakes_by_location():
     """
     Load the locations from a json file and get earthquake data
-    for a radius of 1000km around each of them
+    for a radius of around each of them
     """
 
     # Load locations from json file
@@ -74,10 +78,11 @@ def get_earthquakes_by_location():
         return None
 
     # Fetch earthquake data for each location
+    radius = "1000"
     df = pd.DataFrame()
     for location in locations["locations"]:
         df = pd.concat(
-            [df, fetch_data(location)], ignore_index=True)
+            [df, fetch_data(location, radius)], ignore_index=True)
 
     # Fix data columns and keep only relevant ones
     df["geometry_coordinates"] = pd.eval(
@@ -102,6 +107,16 @@ def get_earthquakes_by_location():
     return df
 
 
+def get_all_earthquakes():
+    """
+    Get all earthquakes that happened in the current calendar year
+    """
+    eq_list = fetch_data()
+    print(eq_list)
+
+    return eq_list
+
+
 # def insert_to_bigquery(df):
 #     """
 #     Insert data into a BigQuery table
@@ -118,3 +133,6 @@ if __name__ == "__main__":
     if earthquake_data is not None:
         earthquake_data.to_csv("earthquakes.csv")
         # insert_to_bigquery(earthquake_data)
+
+    # All earhtquakes in the current year
+    # eq_list_current_year = get_all_earthquakes()
