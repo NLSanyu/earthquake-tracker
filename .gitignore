@@ -15,3 +15,6 @@ venv/
 # Data files
 *.csv
 *.json
+
+# Other
+*.DS_Store
