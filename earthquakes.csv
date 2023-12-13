@@ -1,0 +1,18 @@
+,id,datetime,magnitude,latitude,longitude,place,location_name
+0,us7000j5tm,2023-01-12 09:37:07.814,2.8,49.883,18.6633,"2 km NW of Pruchna, Poland",Copenhagen
+1,us6000jrh6,2023-02-24 23:59:40.349,3.4,51.8114,-3.1601,"2 km NE of Brynmawr, United Kingdom",London
+2,us6000jpbt,2023-02-16 09:47:45.901,4.8,44.9868,14.706,"4 km WNW of Baška, Croatia",Berlin
+3,us6000jjxr,2023-01-28 05:32:50.156,4.2,44.2129,12.3668,"2 km WNW of Cesenatico, Italy",Berlin
+4,us7000j5tm,2023-01-12 09:37:07.814,2.8,49.883,18.6633,"2 km NW of Pruchna, Poland",Berlin
+5,us7000j3ua,2023-01-12 07:06:13.799,4.0,43.9032,13.4288,"27 km NE of Senigallia, Italy",Berlin
+6,us7000j45y,2023-01-03 13:28:38.486,4.3,48.3357,23.1428,"1 km NNE of Bilky, Ukraine",Berlin
+7,us6000jr9k,2023-02-24 09:15:04.501,3.2,36.5887,-8.092,"49 km SSW of Faro, Portugal",Madrid
+8,us6000jqbh,2023-02-12 08:36:45.805,4.4,35.0177,-3.8262,Strait of Gibraltar,Madrid
+9,us6000jqbf,2023-02-12 06:59:30.586,4.1,35.0455,-3.8846,"7 km SSW of Bni Bouayach, Morocco",Madrid
+10,us7000j2t5,2023-01-07 13:28:57.408,4.4,34.9885,-3.8382,"12 km S of Bni Bouayach, Morocco",Madrid
+11,us7000j2ru,2023-01-07 08:12:28.095,4.9,34.995,-3.9009,Morocco,Madrid
+12,us6000jr9k,2023-02-24 09:15:04.501,3.2,36.5887,-8.092,"49 km SSW of Faro, Portugal",Lisbon
+13,us6000jqbh,2023-02-12 08:36:45.805,4.4,35.0177,-3.8262,Strait of Gibraltar,Lisbon
+14,us6000jqbf,2023-02-12 06:59:30.586,4.1,35.0455,-3.8846,"7 km SSW of Bni Bouayach, Morocco",Lisbon
+15,us7000j2t5,2023-01-07 13:28:57.408,4.4,34.9885,-3.8382,"12 km S of Bni Bouayach, Morocco",Lisbon
+16,us7000j2ru,2023-01-07 08:12:28.095,4.9,34.995,-3.9009,Morocco,Lisbon

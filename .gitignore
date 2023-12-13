@@ -13,8 +13,8 @@ env/
 venv/
 
 # Data files
-*.csv
-*.json
+# *.csv
+# *.json
 
 # Other
 *.DS_Store
